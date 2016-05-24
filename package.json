@@ -1,0 +1,29 @@
+{
+  "name": "filter-me.js",
+  "version": "1.0.0",
+  "description": "Javascript and CSS web app for testing CSS filters",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Hello World\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/embrah/Filter-me.js.git"
+  },
+  "keywords": [
+    "filter"
+  ],
+  "author": "Emil Mladenov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/embrah/Filter-me.js/issues"
+  },
+  "homepage": "https://github.com/embrah/Filter-me.js#readme"
+}
