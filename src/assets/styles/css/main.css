@@ -1,0 +1,22 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: Raleway;
+  text-align: center; }
+
+.filters-menu {
+  background: #000;
+  color: #fff;
+  max-width: 200px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .filters-menu input {
+    display: block;
+    margin: 10px 0; }
