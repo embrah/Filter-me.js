@@ -5,6 +5,7 @@
     <title>Filter Me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="assets/styles/css/normalize.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/css/main.css">
 </head>
 
@@ -12,25 +13,33 @@
     <header>
         <h1>Filter me - CSS Filters Playground</h1>
     </header>
-    <div class="filters-menu">
-        <input type="range">
+    <div class="workspace">
+        <input type="file" name="upload" id="upload" onchange="loadFile()">
+        <div class="align-tools">
+        <div class="filters-menu">
+        <input type="range" id="grayscale" class="percentage" value="0" >
         <p>Grayscale</p>
-        <input type="range">
+        <input type="range" id="sepia" class="percentage" value="0">
         <p>Sepia</p>
-        <input type="range">
+        <input type="range" id="saturate" class="percentage" value="100">
         <p>Saturate</p>
-        <input type="range">
+        <input type="range" id="hueRotate" value="0">
         <p>Hue-rotate</p>
-        <input type="range">
+        <input type="range" id="invert" class="percentage" value="0">
         <p>Invert</p>
-        <input type="range">
+        <input type="range" id="opacity" class="percentage" value="100">
         <p>Opacity</p>
-        <input type="range">
+        <input type="range" id="brightness" class="percentage" value="100">
         <p>Brightness</p>
-        <input type="range">
+        <input type="range" id="contrast" class="percentage" value="100">
         <p>Contrast</p>
-        <input type="range">
+        <input type="range" id="blur" value="0">
         <p>Blur</p>
+    </div>
+        <div class="imageholder" id="editor" style="display:block;">
+        <img src="" id="result">
+        </div>
+        </div>
     </div>
     <script type="text/javascript" src="assets/script/main.js"></script>
 </body>
