@@ -3,20 +3,36 @@
 
 body {
   font-family: Raleway;
-  text-align: center; }
+  background: lightblue; }
 
-.filters-menu {
+header {
   background: #000;
   color: #fff;
-  max-width: 200px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  padding: 10px 15px;
+  margin: 0;
+  padding: 10px 0;
   display: flex;
-  flex-direction: column;
-  align-items: center; }
-  .filters-menu input {
-    display: block;
-    margin: 10px 0; }
+  justify-content: center; }
+
+.workspace {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  background: pink;
+  max-width: 100%; }
+  .workspace input[type="file"] {
+    margin-top: 20px; }
+  .workspace .align-tools {
+    display: flex;
+    justify-content: space-between; }
+  .workspace .filters-menu {
+    align-self: flex-start;
+    padding-left: 50px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center; }
+  .workspace .imageholder {
+    margin-right: 25%;
+    max-width: 50%; }
+    .workspace .imageholder img {
+      max-width: 100%;
+      padding: 100px 0; }
