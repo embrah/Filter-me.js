@@ -1,6 +1,9 @@
 * {
   box-sizing: border-box; }
 
+html {
+  background: #000; }
+
 body {
   font-family: Raleway;
   background-image: url(../../images/background.jpg);
@@ -40,13 +43,13 @@ header {
 .col-11 {
   display: flex;
   flex: 0 1 90%;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   align-items: center;
   padding: 20px 0; }
 
 .imageholder {
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: column wrap;
   align-items: center;
   width: 50%; }
   .imageholder img {
@@ -101,8 +104,4 @@ input[type=range]::-webkit-slider-runnable-track {
       order: -1;
       margin: 0; }
       .row .col-11 .imageholder {
-        width: 100%; }
-    .row .col-1 {
-      display: block;
-      text-align: center;
-      margin: 0; } }
+        width: 100%; } }
