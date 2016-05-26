@@ -83,3 +83,6 @@ function applyFilters () {
 }
 
 setInterval('applyFilters()',100);
+
+//TODO  - add reset button
+//TODO - add text from filters
