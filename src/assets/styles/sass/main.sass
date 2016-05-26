@@ -1,9 +1,21 @@
 *
 	box-sizing: border-box
 
+
+html
+	background: #000
+
+
 body
 	font-family: Raleway
-	background: lightblue
+	background-image: url(../../images/background.jpg)
+	background-color: #fff
+	background:
+		size: cover
+		repeat: no-repeat
+		position: top center
+		blend-mode: darken
+
 
 
 header
@@ -17,34 +29,95 @@ header
 .container
 	display: flex
 	flex-flow: column nowrap
+	height: 100%
 
 .row
 	display: flex
 	flex-flow: row nowrap
 
-.col-3
+.col-1
 	display: flex
-	flex: 0 1 25%
-	background: pink
-	flex-flow: column nowrap
+	flex: 0 1 10%
 	align-items: center
-	padding: 20px 0
+	background: #000
+	color: #fff
+	flex-flow: column nowrap
+	padding: 20px 10px
+	height: 100%
 
 
-.col-9
+.col-11
 	display: flex
-	flex: 0 1 75% 
-	background: yellow
-	flex-flow: column nowrap
+	flex: 0 1 90% 
+	flex-flow: column wrap
 	align-items: center
-
 	padding: 20px 0
 
 
 .imageholder
 	display: flex
-	flex-flow: column nowrap
+	flex-flow: column wrap
 	align-items: center
 	width: 50%
 	img
 		max-width: 100%
+
+input[type="range"]
+	-webkit-appearance: none
+	&::-webkit-slider-thumb
+		-webkit-appearance: none
+	&:focus
+		outline: none
+	&::-ms-track
+		width: 100%
+		cursor: pointer
+		background: transparent
+		border-color: transparent
+		color: transparent
+
+
+input[type=range]::-webkit-slider-thumb 
+  -webkit-appearance: none
+  height: 15px
+  width: 15px
+  border-radius: 100%
+  background: #ffffff
+  cursor: pointer
+  margin-top: -7px 
+  
+input[type="file"]
+	&::-webkit-file-upload-button
+		background: #000
+		border: none
+		padding: 8px 16px
+		border-radius: 5px
+		margin-bottom: 10px
+		color: #fff
+	&:focus
+		outline: none
+
+
+
+
+input[type=range]::-webkit-slider-runnable-track 
+  width: 100%
+  height: 2px
+  cursor: pointer
+  box-shadow: 1px 1px 1px #fff, 0px 0px 1px #fff
+  background: #fff
+  border-radius: 1.3px
+  border: 0.2px solid #fff
+
+@media (max-width: 450px)
+	.row
+		flex-flow: column nowrap
+		.col-11
+			order: -1
+			margin: 0
+			.imageholder
+				width: 100%
+				padding-top 20px
+		
+			
+	
+
