@@ -1,16 +1,3 @@
-//grayscale   - 0 - 100%
-// sepia - 0 - 100%
-//saturate - 0 - 100%
-//hue-rotate - 0 - 360deg
-//invert - 0 - 100%
-//opacity -  0 - 100%
-//brightness - 0 - 100%
-//contrast - 0 - 100%
-//blur - 0 - 50px
-
-
-
-
 
 function loadFile() {
 		var upload, reader, preview;
@@ -30,11 +17,6 @@ function loadFile() {
     }
 
 }
-
-
-
-
-
 
 function applyFilters () {
 	var editor,effects,percentages,i,len,prop,grayscale,sepia,saturate,hueRotate,invert,opacity,brightness,contrast,blur,stringed,none;
@@ -78,31 +60,26 @@ function applyFilters () {
 	blur.max = 50;
 	blur.step = 1;
 
-	effects['grayscale'] = grayscale.value + '%';
-	effects['sepia'] = sepia.value + '%';
-	effects['saturate'] = saturate.value + '%';
-	effects['hue-rotate'] = hueRotate.value + 'deg';
-	effects['invert'] = invert.value + '%';
-	effects['opacity'] = opacity.value + '%';
-	effects['brightness'] = brightness.value + '%';
-	effects['contrast'] = contrast.value + '%';
-	effects['blur'] = blur.value + 'px';
-	stringed = '-webkit-filter:';
+	effects['grayscale'] = grayscale.value +'%';
+	effects['sepia'] = sepia.value +'%';
+	effects['saturate'] = saturate.value +'%';
+	effects['hue-rotate'] = hueRotate.value +'deg';
+	effects['invert'] = invert.value +'%';
+	effects['opacity'] = opacity.value +'%';
+	effects['brightness'] = brightness.value +'%';
+	effects['contrast'] = contrast.value +'%';
+	effects['blur'] = blur.value+'px';
+	stringed = '';
 
 	for (prop in effects) {
-		stringed += prop + '(' + effects[prop]+ ') ';
-	};
+		if (effects[prop]!=='0%' && effects[prop]!=='0deg' && effects[prop]!=='0px' ) {
+			stringed += prop + '(' +effects[prop]+') ';
+		}
 
-	stringed += ';'
-	editor.style.cssText = stringed;
+	}
 
-	
-
-	
-
+	editor.style.cssText = ('-webkit-filter:'+ ' ' + stringed+';');
 
 }
 
-
-setInterval('applyFilters()',200);
-
+setInterval('applyFilters()',100);
