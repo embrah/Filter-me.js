@@ -8,31 +8,39 @@ body {
 header {
   background: #000;
   color: #fff;
-  margin: 0;
-  padding: 10px 0;
-  display: flex;
-  justify-content: center; }
+  padding: 18px 0;
+  text-align: center; }
+  header h1 {
+    margin: 0; }
 
-.workspace {
+.container {
+  display: flex;
+  flex-flow: column nowrap; }
+
+.row {
+  display: flex;
+  flex-flow: row nowrap; }
+
+.col-3 {
+  display: flex;
+  flex: 0 1 25%;
+  background: pink;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 20px 0; }
+
+.col-9 {
+  display: flex;
+  flex: 0 1 75%;
+  background: yellow;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 20px 0; }
+
+.imageholder {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  background: pink;
-  max-width: 100%; }
-  .workspace input[type="file"] {
-    margin-top: 20px; }
-  .workspace .align-tools {
-    display: flex;
-    justify-content: space-between; }
-  .workspace .filters-menu {
-    align-self: flex-start;
-    padding-left: 50px;
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center; }
-  .workspace .imageholder {
-    margin-right: 25%;
-    max-width: 50%; }
-    .workspace .imageholder img {
-      max-width: 100%;
-      padding: 100px 0; }
+  width: 50%; }
+  .imageholder img {
+    max-width: 100%; }
