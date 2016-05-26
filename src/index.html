@@ -1,4 +1,4 @@
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -11,34 +11,39 @@
 
 <body>
     <header>
-        <h1>Filter me - CSS Filters Playground</h1>
+        <h1>Filter-me.js</h1>
     </header>
-    <div class="workspace">
-        <input type="file" name="upload" id="upload" onchange="loadFile()">
-        <div class="align-tools">
-        <div class="filters-menu">
-        <input type="range" id="grayscale" class="percentage" value="0" >
-        <p>Grayscale</p>
-        <input type="range" id="sepia" class="percentage" value="0">
-        <p>Sepia</p>
-        <input type="range" id="saturate" class="percentage" value="100">
-        <p>Saturate</p>
-        <input type="range" id="hueRotate" value="0">
-        <p>Hue-rotate</p>
-        <input type="range" id="invert" class="percentage" value="0">
-        <p>Invert</p>
-        <input type="range" id="opacity" class="percentage" value="100">
-        <p>Opacity</p>
-        <input type="range" id="brightness" class="percentage" value="100">
-        <p>Brightness</p>
-        <input type="range" id="contrast" class="percentage" value="100">
-        <p>Contrast</p>
-        <input type="range" id="blur" value="0">
-        <p>Blur</p>
-    </div>
-        <div class="imageholder" id="editor" style="display:block;">
-        <img src="" id="result">
-        </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-3">
+                <div class="filters-menu">
+                		<p>Grayscale</p>
+                    <input type="range" id="grayscale" class="percentage" value="0">
+                    <p>Sepia</p>
+                    <input type="range" id="sepia" class="percentage" value="0">
+                    <p>Saturate</p>
+                    <input type="range" id="saturate" class="percentage" value="100">
+                    <p>Hue-rotate</p>
+                    <input type="range" id="hueRotate" value="0">
+                    <p>Invert</p>
+                    <input type="range" id="invert" class="percentage" value="0">
+                    <p>Opacity</p>
+                    <input type="range" id="opacity" class="percentage" value="100">
+                    <p>Brightness</p>
+                    <input type="range" id="brightness" class="percentage" value="100">
+                    <p>Contrast</p>
+                    <input type="range" id="contrast" class="percentage" value="100">
+                    <p>Blur</p>
+                    <input type="range" id="blur" value="0">
+                    
+                </div>
+            </div>
+            <div class="col-9">
+                <input type="file" name="upload" id="upload" onchange="loadFile()">
+                <div class="imageholder" id="editor">
+                    <img src="" id="result">
+                </div>
+            </div>
         </div>
     </div>
     <script type="text/javascript" src="assets/script/main.js"></script>
