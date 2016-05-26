@@ -19,7 +19,7 @@ function loadFile() {
 }
 
 function applyFilters () {
-	var editor,effects,percentages,i,len,prop,grayscale,sepia,saturate,hueRotate,invert,opacity,brightness,contrast,blur,stringed,none;
+	var editor,effects,percentages,i,len,prop,grayscale,sepia,saturate,hueRotate,invert,opacity,brightness,contrast,blur,stringed,textholder;
 
 	effects = {
     'grayscale': '',
@@ -42,6 +42,7 @@ function applyFilters () {
 	brightness = document.getElementById('brightness');
 	contrast = document.getElementById('contrast');
 	blur = document.getElementById('blur');
+	textholder = document.getElementById('textholder');
 
 	percentages = document.getElementsByClassName('percentages');
 
@@ -79,10 +80,13 @@ function applyFilters () {
 	}
 
 	editor.style.cssText = ('-webkit-filter:'+ ' ' + stringed+';');
+	textholder.innerHTML  = ('-webkit-filter:'+ ' ' + stringed+';');
+
 
 }
 
 setInterval('applyFilters()',100);
+
 
 //TODO  - add reset button
 //TODO - add text from filters

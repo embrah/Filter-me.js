@@ -97,6 +97,10 @@ input[type=range]::-webkit-slider-runnable-track {
   border-radius: 1.3px;
   border: 0.2px solid #fff; }
 
+button {
+  display: block;
+  margin: 10px auto; }
+
 @media (max-width: 450px) {
   .row {
     flex-flow: column nowrap; }
